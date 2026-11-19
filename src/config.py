@@ -10,7 +10,7 @@ load_dotenv()
 
 @dataclass(frozen=True)
 class Settings:
-    research_model: str = os.getenv("RESEARCHER_MODEL", "qwen3.5:2b")
+    researcher_model: str = os.getenv("RESEARCHER_MODEL", "qwen3.5:2b")
     writer_model: str = os.getenv("WRITER_MODEL", "llama3.2:3b")
     critic_model: str = os.getenv("CRITIC_MODEL", "qwen3.5:4b")
     ollama_base_url: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
